@@ -836,9 +836,10 @@ $(".formdata").submit(function(event)
     event.preventDefault()
     var getvalue = $(".input").val()
     console.log(getvalue)
+   var getlowervalue = getvalue.toLowerCase()
     for(var i=0;i<teams.length;i++)
     {
-       if(teams[i].teamname == getvalue)
+       if(teams[i].teamname == getlowervalue)
        {
           localStorage.setItem('id',teams[i].id)
           window.location.assign('./teamdetailspage.html')
