@@ -842,7 +842,8 @@ $(".formdata").submit(function(event)
        {
           localStorage.setItem('id',teams[i].id)
           window.location.assign('./teamdetailspage.html')
-          $('.input').val("").attr('placeholder',"enter team name")
+          $('.input').val("").attr('placeholder',"enter team name or player name")
+          
        }
     } 
     var getuppervalue = getvalue.toUpperCase()
@@ -854,6 +855,7 @@ $(".formdata").submit(function(event)
             {
                localStorage.setItem('playername',getuppervalue)
              window.location.assign("./playerdetails.html")
+                $('.input').val("").attr('placeholder',"enter team name or playername")
             }
          }
       }
